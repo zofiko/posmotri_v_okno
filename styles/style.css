@@ -44,7 +44,6 @@ ol {
   justify-content: space-between;
   align-items: flex-end;
   gap: 30px;
-  inline-size: 1140px;
 }
 
 .content__list {
@@ -84,10 +83,8 @@ ol {
 }
 
 .content__video-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 194px;
 }
 
 .content__video-card-thumbnail {
@@ -95,8 +92,13 @@ ol {
   block-size: 103px;
 }
 
+p {
+  height: fit-content;
+}
+
 .content__video-card-description-container {
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   gap: 6px;
 }
@@ -106,6 +108,8 @@ ol {
   font-size: 75px;
   font-weight: bold;
   line-height: 0.94em;
+  letter-spacing: 0px;
+  font-family: "Oswald", sans-serif;
 }
 
 .content__accent {
@@ -118,6 +122,7 @@ ol {
   font-weight: bold;
   line-height: 1em;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 .content__video-card-description {
@@ -125,6 +130,7 @@ ol {
   font-weight: normal;
   line-height: 0.162em;
   color: #fff;
+  inline-size: 100%;
 }
 
 .content__card-link {
@@ -135,7 +141,7 @@ ol {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.22em;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 
 .visually-hidden {
@@ -150,18 +156,25 @@ ol {
 
 .search-form__fieldset {
   border: none;
+  display: grid;
+  row-gap: 5px;
 }
 
 .search-form__textfield {
-  inline-size: 255px;
+  inline-size: 225px;
   background-color: #1b1919;
   appearance: none;
-  padding: 2.5px 14px 2.5px 0px;
+  padding: 2.5px 0px;
   border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  block-size: 27px;
 }
 ::placeholder {
   font-size: 18px;
   line-height: 1.22em;
+  font-family: "Fira Sans Condensed", sans-serif;
+  letter-spacing: 0px;
 }
 
 .search-form__checkbox-list {
@@ -204,4 +217,8 @@ ol {
 
 .search-form {
   margin-bottom: 0;
+}
+
+.content__list {
+  overflow-x: hidden;
 }

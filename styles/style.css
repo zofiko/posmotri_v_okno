@@ -95,14 +95,13 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   gap: 26px;
-  inline-size: 399px;
 }
 
 .content__list {
   overflow: auto;
   position: relative;
-  inline-size: 399px;
   block-size: 298px;
+  min-inline-size: 399px;
 }
 
 .content__list-item:not(:last-child) {
